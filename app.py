@@ -10,7 +10,8 @@ model.fit(iris.data, iris.target)
 class_names = ["setosa", "versicolor", "virginica"]
 
 @app.get("/health")
-async def health(): return {"status": "ok"}
+async def health():
+    return {"status": "ok"}
 
 @app.get("/predict")
 async def predict(sl: float, sw: float, pl: float, pw: float):
